@@ -1,0 +1,61 @@
+/*
+input 样式
+*/
+.context h2{
+    text-align: center;
+}
+.context form{
+    margin: 10px;
+    margin-top: 30px;
+}
+.context span{
+    font-family: 宋体;
+}
+.context input{
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.context input:valid,
+.context input:focus{
+    border-bottom: 2px solid #00BFFF;
+}
+/*
+button样式 (提交和取消)
+ */
+.context button{
+    padding: 15px 25px;
+    margin: 10px;
+    background-color: #00E676;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.5s;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.context button:hover{
+    background-color: 	#40E0D0;
+    transform: translateY(5px);
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.2),0 8px 24px 0 rgba(0,0,0,0.19);
+}
+.context a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 16px 25px;
+    margin: 10px;
+    background-color: #F08080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.5s;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.context a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #FF7F50;
+    transform: translateY(5px);
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.2),0 8px 24px 0 rgba(0,0,0,0.19);
+}

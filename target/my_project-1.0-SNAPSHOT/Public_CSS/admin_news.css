@@ -1,0 +1,117 @@
+.admin{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #00BFFF;
+}
+.admin h2{
+    color: white;
+}
+.admin span{
+    color: red;
+}
+.news{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.news table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.news table th,
+.news table td{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.news tbody tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+.news .operate{
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    background-color: lightcoral;
+}
+.news a.operate:hover{
+    background-color: red;
+}
+.add{
+    margin: 10px;
+    /*text-decoration: none;*/
+}
+.add a{
+    float: right;
+    display: block;
+    background-color: #00BFFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*
+设置news图标的样式
+ */
+.news h2 i{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 40px;
+    color: #00BFFF;
+}
+/*
+设置返回图表样式
+ */
+.context .back{
+    padding: 0;
+    margin: 20px 10px;
+}
+.context .back i{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 25px;
+    color: #4169E1;
+}
+.context .back a{
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+.context .back a:hover{
+    transform: scale(1.2);
+}
+
+/*
+设置query 查找样式
+ */
+.context .query{
+    margin: 10px;
+}
+.context input{
+    margin-right: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.context .query button{
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: #90EE90;
+    color: white;
+    transition: transform 0.3s;
+}
+.context .query button i{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+}
+.context .query button:hover{
+    background-color: #00E676;
+    transform: scale(1.1);
+}
