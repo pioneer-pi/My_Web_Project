@@ -9,8 +9,36 @@
 <html>
 <head>
     <title>${teacher.name}-老师介绍</title>
-    <link rel="stylesheet" href="/2019210179/jsp/Public_CSS/sidebar.css" type="text/css">
+    <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
     <style>
+        /*
+        Card布局展示老师图片
+        */
+        .blank2{
+            flex-direction: row;
+            align-items: center;
+        }
+        .blank2 .card{
+            margin: 40px 20px;
+            width: 200px;
+            height: 300px;
+            text-align: center;
+            position: relative;
+            left: 280px;
+
+        }
+        .blank2 .card .img img{
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .blank2 .card .container{
+            padding: 10px;
+        }
+        .blank2 .card .container p{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -32,7 +60,15 @@
                 </ul>
             </div>
             <div class="blank2">
-                <p>${teacher.id}</p>
+                <div class="card">
+                    <div class="img">
+                        <img src="/2019210179/resources/teachers/teacher_${teacher.id}.jpg" alt="${teacher.name}">
+                    </div>
+                    <div class="container">
+                        <p>${teacher.name}</p>
+                    </div>
+                </div>
+                <br>
                 <p>${teacher.name}</p>
                 <p>${teacher.introduce}</p>
             </div>

@@ -16,6 +16,7 @@
         div.context{
             min-height:100%;
         }
+
         .footer{
             background-color: #4169E1;
             text-align: center;
@@ -23,6 +24,8 @@
             padding-top: 5px;
             font-family: 华文行楷;
             font-size: 30px;
+            margin-top: 50px;
+            margin-bottom: 0;
         }
     </style>
 </head>

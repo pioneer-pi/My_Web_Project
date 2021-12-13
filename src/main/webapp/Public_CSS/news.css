@@ -2,25 +2,33 @@
 该css部分用于实现index界面的一些效果包括：
 新闻和公告模块样式
 轮播图的基本样式
- */
+*/
 
 /*
 新闻和公告模块样式
 */
 div.news{
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
 }
 
 .news div.new{
-    width: 500px;
+    width: 900px;
     margin-left: 150px;
     margin-top: 50px;
     margin-bottom: 30px;
 }
-/*.news .announcement{*/
-/*    margin-left: 150px;*/
-/*}*/
+.news div.title{
+    width: 100%;
+    border-bottom: 1px solid #555555;
+}
+.news .title span{
+    position: relative;
+    left: 830px;
+}
+.news .title span a{
+    text-decoration: none;
+}
 .news div.new i{
     vertical-align: middle;
     display: inline-block;
@@ -29,14 +37,26 @@ div.news{
 }
 .news div.new ul li{
     list-style: none;
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
+    line-height: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .news div.new ul a{
-    display: inline-block;
+    display: block;
     text-decoration: none;
     color: black;
+    padding: 10px;
+    transition: font-size 0.5s;
 }
-
+.news div.new a span{
+    float: right;
+}
+.news div.new ul a:hover{
+    color: #00BFFF;
+    /*font-size: 20px;*/
+}
 /*轮播图CSS 用户规范Index界面的轮播图部分*/
 .carousel-inner img {
     width: 100%;

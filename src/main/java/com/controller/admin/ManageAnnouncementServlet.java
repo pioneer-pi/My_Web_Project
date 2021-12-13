@@ -12,14 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /*
-该Servlet用于转发到Admin界面
+该Servlet用于管理员管理后台的公告信息 ，查询所有的公告并递送给前端界面
  */
-@WebServlet("/admin/welcome")
-public class WelcomeServlet extends HttpServlet {
+@WebServlet("/admin/manageAnnouncement")
+public class ManageAnnouncementServlet extends HttpServlet {
     private NewsService newsService = ServiceFactory.getNewsService();
     private AnnouncementService announcementService = ServiceFactory.getAnnouncementService();
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/admin_jsp/welcome.jsp").forward(request,response);
+        request.setAttribute("AllAnnouncements",announcementService.listAnnouncement());
+        request.getRequestDispatcher("/WEB-INF/admin_jsp/manageAnnouncements.jsp").forward(request,response);
     }
 }

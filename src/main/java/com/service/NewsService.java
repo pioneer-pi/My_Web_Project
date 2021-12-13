@@ -38,4 +38,9 @@ public interface NewsService {
      * 修改News
      */
     public int UpdateNews(int Nid,String author,String title,String context);
+
+    /**
+     * 根据Nid,Title,Author查询新闻信息(可查询三者所有组合任一为空都可以)
+     */
+    public List<News> QueryNews(String Nid,String Title,String Author);
 }

@@ -1,35 +1,32 @@
 <%--
   Created by IntelliJ IDEA.
   User: pioneer
-  Date: 2021/12/8
-  Time: 22:30
+  Date: 2021/12/12
+  Time: 20:44
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-    <title>News_${news.nid}</title>
+    <title>新闻</title>
     <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
     <style>
-        .blank2 h2{
-            font-family: 微软雅黑;
-            /*padding: 10px;*/
+        .blank2 ul{
+            list-style: none;
         }
-        .blank2 p{
-            text-indent: 2px;
-            padding: 5px;
+        .blank2 li{
+            border-bottom: 1px solid #dddddd;
         }
-        #at{
-            text-align: center;
-            font-size: 15px;
+        .blank2 ul a{
+            display: block;
+            text-decoration: none;
+            transition: transform 0.3s;
         }
-        .blank2 img{
-            position: relative;
-            left: 150px;
-        }
-        .blank2 img{
-            width: 600px;
-            height: 400px;
+        .blank2 ul a:hover{
+            color: #4169E1;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -50,13 +47,15 @@
                     <li><a href="/2019210179/listAllAnnouncements">公告</a></li>
                 </ul>
             </div>
+            <div class="nav">
+            </div>
             <div class="blank2">
-                <h2>${news.title}</h2>
-                <p id="at"><span id="author">作者: ${news.author} </span><span id="add_date"> 时间: ${news.add_date}</span></p>
-                <div class="img">
-                    <img src="/2019210179/resources/News/News${news.nid}.png" alt="新闻图片">
-                </div>
-                <p>${news.context}</p>
+                <h2>所有新闻</h2>
+                <ul>
+                <c:forEach items="${allNews}" var="news">
+                    <li><a href="/2019210179/listNewsByNid?Nid=${news.nid}">${news.nid}.  ${news.title}</a></li><br>
+                </c:forEach>
+                </ul>
             </div>
             <div class="blank3">
 

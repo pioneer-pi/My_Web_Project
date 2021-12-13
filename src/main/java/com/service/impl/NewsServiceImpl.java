@@ -3,6 +3,7 @@ package com.service.impl;
 import com.entity.News;
 import com.listener.DataSourceUtils;
 import com.service.NewsService;
+import com.util.SQLUtils;
 
 import javax.xml.crypto.Data;
 import javax.xml.transform.Result;
@@ -133,6 +134,32 @@ public class NewsServiceImpl implements NewsService {
             e.printStackTrace();
         }
         return flag;
+    }
+
+    @Override
+    public List<News> QueryNews(String Nid, String Title, String Author) {
+        List<News> news = new ArrayList<>();
+        SQLUtils sqlUtil = new SQLUtils();
+        String sql = "SELECT Nid,Author,Title,Context,Add_date FROM News where 1=1 ";
+        sql += sqlUtil.subSQL(Nid,Title, Author);
+        try(Connection connection = DataSourceUtils.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+        ){
+            while (resultSet.next()){
+                News news1 = new News();
+                news1.setNid(resultSet.getInt("Nid"));
+                news1.setAuthor(resultSet.getString("Author"));
+                news1.setTitle(resultSet.getString("Title"));
+                news1.setContext(resultSet.getString("Context"));
+                news1.setAdd_date(resultSet.getString("Add_date"));
+                news.add(news1);
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return news;
     }
 
     public static int Count(){

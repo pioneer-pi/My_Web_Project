@@ -12,73 +12,34 @@
 <head>
     <title>管理员页面</title>
     <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/2019210179/Public_CSS/admin_news.css">
     <style>
-        .admin{
-            width: 100%;
+        .context .manage{
+            position: relative;
+        }
+        .context .manage ul{
+            list-style: none;
+            position: relative;
             text-align: center;
-            margin: 30px 0;
-            padding: 10px 0;
-            background-color: #00BFFF;
         }
-        .admin h2{
-            color: white;
+        .context .manage ul li{
+            padding: 20px;
         }
-        .admin span{
-            color: red;
-        }
-        .news{
-            margin-top: 30px;
-            margin-bottom: 100px;
-        }
-        .news table{
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .news table th,
-        .news table td{
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .news tbody tr:nth-child(odd){
-            background-color: #f2f2f2;
-        }
-        .news .operate{
-            display: inline-block;
+        .context .manage a{
             border-radius: 8px;
-            padding: 10px 15px;
-            cursor: pointer;
-            color: white;
-            text-decoration: none;
-            background-color: lightcoral;
-        }
-        .news a.operate:hover{
-            background-color: red;
-        }
-        .add{
-            margin: 10px;
-            /*text-decoration: none;*/
-        }
-        .add a{
-            float: right;
-            display: block;
-            background-color: #00BFFF;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        /*
-        设置news图标的样式
-         */
-        .news h2 i{
-            vertical-align: middle;
             display: inline-block;
-            font-size: 40px;
-            color: #00BFFF;
+            text-decoration: none;
+            background-color: #4169E1;
+            color: white;
+            padding: 50px 80px;
+            box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            transition: transform 0.5s;
+            font-size: 20px;
         }
-
+        .context .manage a:hover{
+            transform: translateY(10px);
+            box-shadow: 0 12px 12px 0 rgba(0,0,0,0.2),0 8px 24px 0 rgba(0,0,0,0.19);
+        }
     </style>
 </head>
 <body>
@@ -90,69 +51,15 @@
     <div class="navigation">
         <%@ include file="/jsp/navigation.jsp"%>
     </div>
-    <div class="admin">
-        <h2>Welcome to admin page!!! <span><strong>${admin.name}</strong></span> Please operate!</h2>
-    </div>
-    <div class="find">
-        <form action="#">
-            <input type="text">
-            <input type="text">
-        </form>
-    </div>
-    <div class="listAll">
-        <div class="news">
-            <h2><i class="material-icons">fiber_new</i>新闻栏</h2>
-            <table>
-                <thead>
-                <tr>
-                    <th>新闻Nid</th>
-                    <th>新闻标题</th>
-                    <th>新闻作者</th>
-                    <th>加入时间</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${AllNews}" var="news">
-                    <tr>
-                        <td>${news.nid}</td>
-                        <td><a href="/2019210179/listNewsByNid?Nid=${news.nid}">${news.title}</a></td>
-                        <td>${news.author}</td>
-                        <td>${news.add_date}</td>
-                        <td><a href="/2019210179/admin/deleteNews?Nid=${news.nid}" class="operate">删除</a> <a href="/2019210179/admin/findNews?Nid=${news.nid}" class="operate">修改</a></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-            <div class="add">
-                <a href="/2019210179/admin/transferAddNews">添加新闻</a>
-            </div>
+    <div class="context">
+        <div class="admin">
+            <h2>Welcome to admin page!!! <span><strong>${admin.name}</strong></span> Please operate!</h2>
         </div>
-        <div class="news announcement">
-            <h2><i class="material-icons">announcement</i>公告栏</h2>
-            <table>
-                <thead>
-                <tr>
-                    <th>公告Aid</th>
-                    <th>公告标题</th>
-                    <th>加入时间</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach items="${AllAnnouncements}" var="a">
-                    <tr>
-                        <td>${a.aid}</td>
-                        <td><a href="/2019210179/listAnnouncementByAid?Aid=${a.aid}">${a.title}</a></td>
-                        <td>${a.add_date}</td>
-                        <td><a href="/2019210179/admin/deleteAnnouncement?Aid=${a.aid}" class="operate">删除</a> <a href="/2019210179/admin/findAnnouncement?Aid=${a.aid}" class="operate">修改</a></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-            <div class="add">
-                <a href="/2019210179/admin/transferAddAnnouncement">添加公告</a>
-            </div>
+        <div class="manage">
+            <ul>
+                <li><a href="/2019210179/admin/manageNews">管理新闻</a></li>
+                <li><a href="/2019210179/admin/manageAnnouncement">管理公告</a></li>
+            </ul>
         </div>
     </div>
     <%--    footer--%>

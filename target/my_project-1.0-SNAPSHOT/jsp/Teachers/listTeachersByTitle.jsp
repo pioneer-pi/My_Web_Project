@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>教师队伍</title>
-    <link rel="stylesheet" href="/2019210179/jsp/Public_CSS/sidebar.css" type="text/css">
+    <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
     <style>
         table{
             border-collapse: collapse;
@@ -93,9 +93,8 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <%@ include file="/jsp/footer.jsp"%>
-    </div>
+    <%--footer--%>
+    <%@ include file="/jsp/footer.jsp"%>
 </div>
 </body>
 </html>

@@ -23,7 +23,7 @@
     <div class="context">
         <form action="/2019210179/admin/addAnnouncement">
             <span>标题: </span><input type="text" name="Title" required><br>
-            <span>内容: </span><input type="text" name="Context"><br>
+            <span>内容: </span><input type="text" name="Context" required><br>
             <button type="submit">提交</button>
         </form>
     </div>

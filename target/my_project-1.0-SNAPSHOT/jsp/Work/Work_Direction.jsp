@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>就业方向-计算机科学与技术专业</title>
-    <link rel="stylesheet" href="/2019210179/jsp/Public_CSS/sidebar.css" type="text/css">
+    <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
 </head>
 <body>
 <div class="container">
@@ -40,9 +40,8 @@
             <div class="blank3"></div>
         </div>
     </div>
-    <div class="footer">
-        <%@ include file="/jsp/footer.jsp"%>
-    </div>
+    <%-- footer--%>
+    <%@ include file="/jsp/footer.jsp"%>
 </div>
 </body>
 </html>
