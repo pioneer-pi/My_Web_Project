@@ -23,6 +23,6 @@ public class UpdateNewsServlet extends HttpServlet {
 
         int flag = newsService.UpdateNews(Nid,author,title,context);
 
-        request.getRequestDispatcher("/admin/welcome").forward(request,response);
+        request.getRequestDispatcher("/admin/manageNews").forward(request,response);
     }
 }

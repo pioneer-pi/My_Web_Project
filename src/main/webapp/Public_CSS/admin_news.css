@@ -83,3 +83,35 @@
 .context .back a:hover{
     transform: scale(1.2);
 }
+
+/*
+设置query 查找样式
+ */
+.context .query{
+    margin: 10px;
+}
+.context input{
+    margin-right: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.context .query button{
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: #90EE90;
+    color: white;
+    transition: transform 0.3s;
+}
+.context .query button i{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+}
+.context .query button:hover{
+    background-color: #00E676;
+    transform: scale(1.1);
+}

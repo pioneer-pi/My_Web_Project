@@ -5,8 +5,6 @@ import com.listener.DataSourceUtils;
 import com.service.NewsService;
 import com.util.SQLUtils;
 
-import javax.xml.crypto.Data;
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

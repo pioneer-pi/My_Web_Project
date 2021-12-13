@@ -18,6 +18,6 @@ public class DeleteNewsServlet extends HttpServlet {
         int Nid = Integer.parseInt(request.getParameter("Nid"));
         int flag = newsService.DeleteNews(Nid);
 
-        request.getRequestDispatcher("/admin/welcome").forward(request,response);
+        request.getRequestDispatcher("/admin/manageNews").forward(request,response);
     }
 }

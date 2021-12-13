@@ -15,23 +15,6 @@
     <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/2019210179/Public_CSS/admin_news.css">
     <style>
-        .context .back{
-            padding: 0;
-            margin: 20px 10px;
-        }
-        .context .back i{
-            vertical-align: middle;
-            display: inline-block;
-            font-size: 25px;
-            color: #4169E1;
-        }
-        .context .back a{
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        .context .back a:hover{
-            transform: scale(1.2);
-        }
     </style>
 </head>
 <body>
@@ -51,10 +34,10 @@
         </div>
         <div class="query">
             <form action="/2019210179/admin/queryNews" method="post">
-                新闻编号: <input type="text" name="Nid">
-                新闻标题: <input type="text" name="Title">
-                新闻作者: <input type="text" name="Author">
-                <button type="submit">查找</button>
+                <label>新闻编号: <input type="text" name="Nid"></label>
+                <label>新闻标题: <input type="text" name="Title"></label>
+                <label>新闻作者: <input type="text" name="Author"></label>
+                <button type="submit"><i class="material-icons">search</i>查找</button>
             </form>
         </div>
         <div class="listAll">
@@ -77,7 +60,7 @@
                             <td><a href="/2019210179/listNewsByNid?Nid=${news.nid}">${news.title}</a></td>
                             <td>${news.author}</td>
                             <td>${news.add_date}</td>
-                            <td><a href="/2019210179/admin/deleteNews?Nid=${news.nid}" class="operate">删除</a> <a href="/2019210179/admin/findNews?Nid=${news.nid}" class="operate">修改</a></td>
+                            <td><a href="/2019210179/admin/findNews?Nid=${news.nid}" class="operate">修改</a> <a href="/2019210179/admin/deleteNews?Nid=${news.nid}" class="operate">删除</a></td>
                         </tr>
                     </c:forEach>
                     </tbody>

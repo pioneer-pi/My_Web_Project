@@ -16,20 +16,38 @@ public class SQLUtils {
         }
         return flag;
     }
-
+    /*
+    For News
+     */
     public String subSQL(String Nid,String Title,String Author) {
         String subSQL = " ";
-        boolean flagGid = sqlUtils.validate(Nid);
-        if (true == flagGid) {
+        boolean flagNid = sqlUtils.validate(Nid);
+        if (true == flagNid) {
             subSQL += " and Nid = " + Nid + " ";
         }
-        boolean flagGname = sqlUtils.validate(Title);
-        if (true == flagGname) {
+        boolean flagTitle = sqlUtils.validate(Title);
+        if (true == flagTitle) {
             subSQL += " and Title = '" + Title + "' ";
         }
-        boolean flagGtype = sqlUtils.validate(Author);
-        if (true == flagGtype) {
+        boolean flagAuthor = sqlUtils.validate(Author);
+        if (true == flagAuthor) {
             subSQL += " and  Author = '" + Author +"' ";
+        }
+
+        return subSQL;
+    }
+    /*
+    For Announcement
+     */
+    public String subSQL(String Aid,String Title) {
+        String subSQL = " ";
+        boolean flagAid = sqlUtils.validate(Aid);
+        if (true == flagAid) {
+            subSQL += " and Aid = " + Aid + " ";
+        }
+        boolean flagTitle = sqlUtils.validate(Title);
+        if (true == flagTitle) {
+            subSQL += " and Title = '" + Title + "' ";
         }
 
         return subSQL;

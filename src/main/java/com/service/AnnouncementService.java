@@ -36,4 +36,8 @@ public interface AnnouncementService {
      * 修改Announcement
      */
     public int UpdateAnnouncement(int Aid,String Title,String Context);
+    /**
+     * 根据Aid,Title查询新闻公告(可查询二者所有组合任一为空都可以)
+     */
+    public List<Announcement> QueryAnnouncements(String Aid,String Title);
 }

@@ -4,6 +4,7 @@ import com.entity.Announcement;
 import com.entity.News;
 import com.listener.DataSourceUtils;
 import com.service.AnnouncementService;
+import com.util.SQLUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -128,6 +129,31 @@ public class AnnouncementImpl implements AnnouncementService {
             e.printStackTrace();
         }
         return flag;
+    }
+
+    @Override
+    public List<Announcement> QueryAnnouncements(String Aid, String Title) {
+        List<Announcement> announcements = new ArrayList<>();
+        SQLUtils sqlUtil = new SQLUtils();
+        String sql = "SELECT Aid,Title,Context,Add_date FROM Announcement where 1=1 ";
+        sql += sqlUtil.subSQL(Aid,Title);
+        try(Connection connection = DataSourceUtils.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+        ){
+            while (resultSet.next()){
+                Announcement announcement = new Announcement();
+                announcement.setAid(resultSet.getInt("Aid"));
+                announcement.setTitle(resultSet.getString("Title"));
+                announcement.setContext(resultSet.getString("Context"));
+                announcement.setAdd_date(resultSet.getString("Add_date"));
+                announcements.add(announcement);
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return announcements;
     }
 
     /*

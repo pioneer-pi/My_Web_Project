@@ -28,6 +28,7 @@
 <%--            <span>新闻内容: </span><input type="text" name="Context" value="${news.context}"><br>--%>
             <span>新闻内容: </span><textarea name="Context">${news.context}</textarea><br>
             <button type="submit">提交</button>
+            <a href="/2019210179/admin/manageNews">取消</a>
         </form>
     </div>
     <%--    footer--%>

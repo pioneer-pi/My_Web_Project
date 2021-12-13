@@ -19,6 +19,6 @@ public class DeleteAnnouncementServlet extends HttpServlet {
 
         int flag = announcementService.DeleteAnnouncement(Aid);
 
-        request.getRequestDispatcher("/admin/welcome").forward(request,response);
+        request.getRequestDispatcher("/admin/manageAnnouncement").forward(request,response);
     }
 }

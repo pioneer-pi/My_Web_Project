@@ -26,6 +26,7 @@
             <span>标题: </span><input type="text" name="Title" required><br>
             <span>内容: </span><input type="text" name="Context"><br>
             <button type="submit">提交</button>
+            <a href="/2019210179/admin/manageNews">取消</a>
         </form>
     </div>
     <%--    footer--%>

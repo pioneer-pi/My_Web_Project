@@ -27,6 +27,6 @@ public class AddAnnouncementServlet extends HttpServlet {
         考虑使用重定向还是转发
          */
 //        response.sendRedirect(request.getContextPath() + "/admin/welcome");
-        request.getRequestDispatcher("/admin/welcome").forward(request,response);
+        request.getRequestDispatcher("/admin/manageAnnouncement").forward(request,response);
     }
 }

@@ -32,6 +32,13 @@
         <div class="admin">
             <h2>Welcome to admin page!!! <span><strong>${admin.name}</strong></span> Please operate!</h2>
         </div>
+        <div class="query">
+            <form action="/2019210179/admin/queryAnnouncements" method="post">
+                <label>公告编号: <input type="text" name="Aid"></label>
+                <label>公告标题: <input type="text" name="Title"></label>
+                <button type="submit"><i class="material-icons">search</i>查找</button>
+            </form>
+        </div>
         <div class="listAll">
             <div class="news announcement">
                 <h2><i class="material-icons">announcement</i>公告栏</h2>
@@ -50,7 +57,7 @@
                             <td>${a.aid}</td>
                             <td><a href="/2019210179/listAnnouncementByAid?Aid=${a.aid}">${a.title}</a></td>
                             <td>${a.add_date}</td>
-                            <td><a href="/2019210179/admin/deleteAnnouncement?Aid=${a.aid}" class="operate">删除</a> <a href="/2019210179/admin/findAnnouncement?Aid=${a.aid}" class="operate">修改</a></td>
+                            <td><a href="/2019210179/admin/findAnnouncement?Aid=${a.aid}" class="operate">修改</a> <a href="/2019210179/admin/deleteAnnouncement?Aid=${a.aid}" class="operate">删除</a></td>
                         </tr>
                     </c:forEach>
                     </tbody>
