@@ -1,6 +1,7 @@
 # My_web_project
 My first project in NEFU
 This is my First web project.
+部署的项目根路径为/2019210179 该网站中所有链接均使用的是绝对路径 用到的技术有Bootstrap,RTF(wangEditor) 项目中所有页面均采用jsp实现
 项目具体要求是
 
 Web 开发技术项目设计
