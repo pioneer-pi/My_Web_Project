@@ -161,7 +161,7 @@ public class NewsServiceImpl implements NewsService {
     }
 
     public static int Count(){
-        String sql = "SELECT count(*) as Count FROM News";
+        String sql = "SELECT MAX(Nid) as Count FROM News";
         int count = 0;
         try(Connection connection = DataSourceUtils.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql);

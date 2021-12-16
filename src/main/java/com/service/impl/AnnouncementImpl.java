@@ -160,7 +160,7 @@ public class AnnouncementImpl implements AnnouncementService {
     该方法用于查询数据库中Announcement的个数
      */
     public static int Count(){
-        String sql = "SELECT count(*) as Count FROM Announcement";
+        String sql = "SELECT MAX(Aid) as Count FROM Announcement";
         int count = 0;
         try(Connection connection = DataSourceUtils.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql);

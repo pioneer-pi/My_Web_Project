@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>News_${news.nid}</title>
@@ -54,7 +56,12 @@
                 <h2>${news.title}</h2>
                 <p id="at"><span id="author">作者: ${news.author} </span><span id="add_date"> 时间: ${news.add_date}</span></p>
                 <div class="img">
-                    <img src="/2019210179/resources/News/News${news.nid}.png" alt="新闻图片">
+                    <c:if test="${news.nid <=6 }">
+                        <img src="/2019210179/resources/News/News${news.nid}.png" alt="新闻图片">
+                    </c:if>
+                    <c:if test="${news.nid > 6}">
+                        <img src="https://picsum.photos/250?random=1" alt="face">
+                    </c:if>
                 </div>
                 <p>${news.context}</p>
             </div>

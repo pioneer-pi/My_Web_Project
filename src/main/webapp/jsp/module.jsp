@@ -59,7 +59,7 @@
                     <div class="form-group">
                         <input type="password" name="password" id="password" required><br>
                         <label for="password" class="form-label">密码:</label>
-                        <p>友情提示：若您没有登陆或者登录失败均会返回主界面(登陆成功之后即可直接进入管理员界面无需再次登录)</p>
+                        <p style="color: #F08080">友情提示：若您没有登陆或者登录失败均会返回主界面(登陆成功之后即可直接进入管理员界面无需再次登录)</p>
                         <a href="/2019210179/admin/welcome">若已登录，直接点击进入管理员界面</a>
                     </div>
                 </div>

@@ -10,6 +10,14 @@
 <head>
     <title>就业方向-计算机科学与技术专业</title>
     <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
+    <style>
+        .blank2 img{
+            width: 800px;
+            height: 600px;
+            object-fit: cover;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -33,8 +41,15 @@
             </div>
             <div class="blank2">
                 <h2>就业方向</h2>
-                <p><strong>就业方向：</strong>
-                    腾讯 阿里 创业
+                <p><strong>就业方向：</strong></p>
+                <img src="/2019210179/resources/Work/direction.jpg" alt="就业方向">
+                <p>1.算法工程师</p>
+                <p>2.大数据工程师</p>
+                <p>3.数据分析师</p>
+                <p>4.架构师</p>
+                <p>5.网站开发者</p>
+                <p>6.游戏开发者</p>
+                <br>
                 <p>专业咨询电话：0451-82191523</p>
             </div>
             <div class="blank3"></div>

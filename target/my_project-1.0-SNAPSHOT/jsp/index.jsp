@@ -18,6 +18,15 @@
 <%--该CSS文件用于新闻公告样式的实现和轮播图图片的设置--%>
     <link rel="stylesheet" href="/2019210179/Public_CSS/news.css">
     <style>
+        .carousel-inner{
+            width: 100%;
+            height: 400px;
+        }
+        .carousel-inner .item img{
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body style="padding-right: 0">
@@ -47,10 +56,10 @@
                 <img src="/2019210179/resources/carousel_imgs/banner_01.jpg" alt="First slide">
             </div>
             <div class="item">
-                <img src="/2019210179/resources/carousel_imgs/banner_01.jpg" alt="Second slide">
+                <img src="/2019210179/resources/carousel_imgs/banner_02.jpg" alt="Second slide">
             </div>
             <div class="item">
-                <img src="/2019210179/resources/carousel_imgs/banner_01.jpg" alt="Third slide">
+                <img src="/2019210179/resources/carousel_imgs/banner_03.jpg" alt="Third slide">
             </div>
         </div>
         <!-- 轮播（Carousel）导航 -->
