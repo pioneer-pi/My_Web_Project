@@ -13,6 +13,7 @@
     <title>更新您的公告</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="/2019210179/Public_CSS/addNews.css">
+    <link rel="shortcut icon" href="/2019210179/resources/icon/hands_up.svg">
 </head>
 <body>
 <div class="container">

@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>header</title>
+    <link rel="shortcut icon" href="/2019210179/resources/icon/hands_up.svg">
     <style>
         *{
             box-sizing: border-box;

@@ -12,6 +12,7 @@
 <head>
     <title>News_${news.nid}</title>
     <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
+    <link rel="shortcut icon" href="/2019210179/resources/icon/hands_up.svg">
     <style>
         .blank2 h2{
             font-family: 微软雅黑;

@@ -10,6 +10,7 @@
 <head>
     <title>${teacher.name}-老师介绍</title>
     <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
+    <link rel="shortcut icon" href="/2019210179/resources/icon/hands_up.svg">
     <style>
         /*
         Card布局展示老师图片

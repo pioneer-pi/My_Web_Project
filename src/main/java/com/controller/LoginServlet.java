@@ -17,7 +17,7 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         String url;
-        if ("pioneer".equals(name) && "123456".equals(password)){
+        if ("admin".equals(name) && "123456".equals(password)){
             Administrator administrator = new Administrator(name,password);
             request.getSession().setAttribute("admin",administrator);
             url = "/admin/welcome";

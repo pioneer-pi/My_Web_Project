@@ -12,6 +12,7 @@
 <head>
     <title>管理员页面</title>
     <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/2019210179/resources/icon/hands_up.svg">
     <link rel="stylesheet" href="/2019210179/Public_CSS/admin_news.css">
     <style>
         .context .manage{

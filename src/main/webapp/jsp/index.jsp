@@ -12,6 +12,7 @@
 <head>
     <c:url var="base" value="/" />
     <title>计算机科学与技术专业</title>
+    <link rel="shortcut icon" href="/2019210179/resources/icon/hands_up.svg">
 <%--Google的图标引入--%>
     <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
 <%-- 轮播图使用的BootStrap保存在Module.jsp中--%>
@@ -89,7 +90,7 @@
         <%--公告栏--%>
         <div class="new announcement">
             <div class="title">
-                <h2><i class="material-icons">fiber_new</i>公告栏</h2>
+                <h2><i class="material-icons">announcement</i>公告栏</h2>
                 <span><a href="/2019210179/listAllAnnouncements">查看更多</a></span>
             </div>
             <ul>

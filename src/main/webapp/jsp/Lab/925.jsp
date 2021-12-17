@@ -10,6 +10,7 @@
 <head>
     <title>实验室介绍-计算机科学与技术专业</title>
     <link rel="stylesheet" href="/2019210179/Public_CSS/sidebar.css" type="text/css">
+    <link rel="shortcut icon" href="/2019210179/resources/icon/hands_up.svg">
     <style>
         .blank2 img{
             width: 800px;
