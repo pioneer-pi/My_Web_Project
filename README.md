@@ -1,3 +1,4 @@
+#Editor: pioneer start from 11.15 or may be later I foget it.
 # My_web_project
 My first project in NEFU
 This is my First web project.
@@ -5,6 +6,10 @@ This is my First web project.
 2021/12/16 21:23 完成了最后对网站的修改（包括一些图片的更新：再插入新闻的时候会随机生成一个图片每次，也更新了一些介绍类的内容，后端没什么更新的）
 使用了模态框登录
 教室也采用了后台连接数据库的方式(管理起来更加方便，尤其是添加老师的时候，但是没有写后台管理老师的方法，没什么时间了)，大体上基本完成
+
+2021/12/17 增加了网站的icon然后暴露了管理员密码 
+
+2021/12/18 上交项目
 
 部署的项目根路径为/2019210179 该网站中所有链接均使用的是绝对路径 用到的技术有Bootstrap,RTF(wangEditor) 项目中所有页面均采用jsp实现
 项目具体要求是
