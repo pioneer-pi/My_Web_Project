@@ -2,6 +2,7 @@
 # My_web_project
 My first project in NEFU
 This is my First web project.
+2022/1/5 尝试启动网站 发现MySQL服务器已经关闭 
 
 2021/12/16 21:23 完成了最后对网站的修改（包括一些图片的更新：再插入新闻的时候会随机生成一个图片每次，也更新了一些介绍类的内容，后端没什么更新的）
 使用了模态框登录
